@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = ActsAsFrequent::VERSION
   s.authors     = ["Shirjeel Alam"]
   s.email       = ["shirjeel20@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/shirjeel-alam"
+  s.summary     = %q{Acts as frequent for Mongoid}
+  s.description = %q{Inject recurring behaviour into any model. For Mongoid}
 
   s.rubyforge_project = "acts_as_frequent"
 
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+  s.add_dependency("mongoid")
 end
