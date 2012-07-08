@@ -1,4 +1,6 @@
 require "acts_as_frequent/version"
+require "active_support/concern"
+require "active_support/dependencies"
 
 module ActsAsFrequent
   extend ActiveSupport::Concern
