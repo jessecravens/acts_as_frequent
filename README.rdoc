@@ -1,6 +1,33 @@
 = acts_as_frequent
 
-Description goes here.
+Provides fields and methods for *recurring* behaviour on Mongoid documents
+
+== Installation
+
+Add to Gemfile:
+
+    gem 'acts_as_frequent'
+
+== Getting Started
+
+Include the module in models where you want it:
+
+    class Event
+      include Mongoid::Document
+      include ActsAsFrequent
+    end
+
+== Usage
+
+    event = Event.create(name: 'Boston Rails Drink Nights')
+    event.build_schedule(days: 'weekend')
+    event.save
+
+    event.last_occurrence # Gets the last occurrence of the resource
+    event.next_occurrence # Gets the next occurrence of the resource
+    event.next_occurrences(10) # Gets the next 10 occurrences of the resource
+    event.prev_occurrence # Gets the prev occurrence of the resource
+    event.prev_occurrences(10) # Gets the prev 10 occurrences of the resource
 
 == Contributing to acts_as_frequent
  
